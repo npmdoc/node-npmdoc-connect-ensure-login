@@ -1,0 +1,302 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jaredhanson/connect-ensure-login#readme"
+
+    >connect-ensure-login (v0.1.1)</a>
+</h1>
+<h4>Login session ensuring middleware for Connect.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.connect-ensure-login">module connect-ensure-login</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.connect-ensure-login.ensureAuthenticated">
+            function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureAuthenticated
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.connect-ensure-login.ensureLoggedIn">
+            function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureLoggedIn
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.connect-ensure-login.ensureLoggedOut">
+            function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureLoggedOut
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.connect-ensure-login.ensureNotAuthenticated">
+            function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureNotAuthenticated
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.connect-ensure-login.ensureNotLoggedIn">
+            function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureNotLoggedIn
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.connect-ensure-login.ensureUnauthenticated">
+            function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureUnauthenticated
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.connect-ensure-login" id="apidoc.module.connect-ensure-login">module connect-ensure-login</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.connect-ensure-login.ensureAuthenticated" id="apidoc.element.connect-ensure-login.ensureAuthenticated">
+        function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureAuthenticated
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureLoggedIn(options) {
+  if (typeof options == &#x27;string&#x27;) {
+    options = { redirectTo: options }
+  }
+  options = options || {};
+
+  var url = options.redirectTo || &#x27;/login&#x27;;
+  var setReturnTo = (options.setReturnTo === undefined) ? true : options.setReturnTo;
+
+  return function(req, res, next) {
+    if (!req.isAuthenticated || !req.isAuthenticated()) {
+      if (setReturnTo &#x26;&#x26; req.session) {
+        req.session.returnTo = req.originalUrl || req.url;
+      }
+      return res.redirect(url);
+    }
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.connect-ensure-login.ensureLoggedIn" id="apidoc.element.connect-ensure-login.ensureLoggedIn">
+        function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureLoggedIn
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureLoggedIn(options) {
+  if (typeof options == &#x27;string&#x27;) {
+    options = { redirectTo: options }
+  }
+  options = options || {};
+
+  var url = options.redirectTo || &#x27;/login&#x27;;
+  var setReturnTo = (options.setReturnTo === undefined) ? true : options.setReturnTo;
+
+  return function(req, res, next) {
+    if (!req.isAuthenticated || !req.isAuthenticated()) {
+      if (setReturnTo &#x26;&#x26; req.session) {
+        req.session.returnTo = req.originalUrl || req.url;
+      }
+      return res.redirect(url);
+    }
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.connect-ensure-login.ensureLoggedOut" id="apidoc.element.connect-ensure-login.ensureLoggedOut">
+        function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureLoggedOut
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureLoggedOut(options) {
+  if (typeof options == &#x27;string&#x27;) {
+    options = { redirectTo: options }
+  }
+  options = options || {};
+
+  var url = options.redirectTo || &#x27;/&#x27;;
+
+  return function(req, res, next) {
+    if (req.isAuthenticated &#x26;&#x26; req.isAuthenticated()) {
+      return res.redirect(url);
+    }
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.connect-ensure-login.ensureNotAuthenticated" id="apidoc.element.connect-ensure-login.ensureNotAuthenticated">
+        function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureNotAuthenticated
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureLoggedOut(options) {
+  if (typeof options == &#x27;string&#x27;) {
+    options = { redirectTo: options }
+  }
+  options = options || {};
+
+  var url = options.redirectTo || &#x27;/&#x27;;
+
+  return function(req, res, next) {
+    if (req.isAuthenticated &#x26;&#x26; req.isAuthenticated()) {
+      return res.redirect(url);
+    }
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.connect-ensure-login.ensureNotLoggedIn" id="apidoc.element.connect-ensure-login.ensureNotLoggedIn">
+        function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureNotLoggedIn
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureLoggedOut(options) {
+  if (typeof options == &#x27;string&#x27;) {
+    options = { redirectTo: options }
+  }
+  options = options || {};
+
+  var url = options.redirectTo || &#x27;/&#x27;;
+
+  return function(req, res, next) {
+    if (req.isAuthenticated &#x26;&#x26; req.isAuthenticated()) {
+      return res.redirect(url);
+    }
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.connect-ensure-login.ensureUnauthenticated" id="apidoc.element.connect-ensure-login.ensureUnauthenticated">
+        function <span class="apidocSignatureSpan">connect-ensure-login.</span>ensureUnauthenticated
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ensureLoggedOut(options) {
+  if (typeof options == &#x27;string&#x27;) {
+    options = { redirectTo: options }
+  }
+  options = options || {};
+
+  var url = options.redirectTo || &#x27;/&#x27;;
+
+  return function(req, res, next) {
+    if (req.isAuthenticated &#x26;&#x26; req.isAuthenticated()) {
+      return res.redirect(url);
+    }
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
