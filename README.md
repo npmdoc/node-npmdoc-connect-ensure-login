@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/connect-ensure-login.png?downloads=true)](https://www.npmjs.com/package/connect-ensure-login)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-connect-ensure-login/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-connect-ensure-login%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-connect-ensure-login/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-connect-ensure-login/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-connect-ensure-login%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-connect-ensure-login/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-connect-ensure-login/build/screenCapture.npmPackageListing.svg)
 
