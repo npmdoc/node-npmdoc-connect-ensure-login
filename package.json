@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "connect-ensure-login",
-    "description": "api documentation for [connect-ensure-login (v0.1.1)](https://github.com/jaredhanson/connect-ensure-login#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-connect-ensure-login.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-connect-ensure-login) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-connect-ensure-login.svg)](https://travis-ci.org/npmdoc/node-npmdoc-connect-ensure-login)",
+    "description": "#### basic api documentation for  [connect-ensure-login (v0.1.1)](https://github.com/jaredhanson/connect-ensure-login#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-connect-ensure-login.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-connect-ensure-login) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-connect-ensure-login.svg)](https://travis-ci.org/npmdoc/node-npmdoc-connect-ensure-login)",
     "devDependencies": {
         "connect-ensure-login": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
